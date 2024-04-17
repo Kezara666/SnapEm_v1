@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".SplashScreen">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CardViewBind"
+        android:layout_width="165dp"
+        android:layout_height="162dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+
+        <ImageView
+            android:id="@+id/iv_note"
+            android:layout_width="167dp"
+            android:layout_height="163dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.569"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.544"
+            app:srcCompat="@mipmap/splash_screen_foreground"
+            tools:srcCompat="@mipmap/splash_screen_foreground" />
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="418dp"
+        android:layout_height="218dp"
+        android:layout_marginBottom="177dp"
+        app:layout_constraintBottom_toTopOf="@+id/CardViewBind"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/logoo" />
+
+    <EditText
+        android:id="@+id/txt_username"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/backwithborder"
+        android:drawableLeft="@android:drawable/sym_action_email"
+        android:drawablePadding="5dp"
+        android:drawableTint="#ffff"
+        android:hint="Username (Email)"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:textColor="#bdc3c7"
+        android:textColorHint="#bdc3c7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CardViewBind"
+        app:layout_constraintVertical_bias="0.149" />
+
+    <EditText
+        android:id="@+id/txt_pass"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/txt_username"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/backwithborder"
+        android:drawableLeft="@android:drawable/ic_lock_idle_lock"
+        android:drawablePadding="5dp"
+        android:drawableTint="#ffff"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColor="#bdc3c7"
+        android:textColorHint="#bdc3c7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_username"
+        app:layout_constraintVertical_bias="0.236" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_username"
+        app:layout_constraintVertical_bias="0.555"
+        tools:layout_editor_absoluteX="-16dp">
+
+        <TextView
+            android:id="@+id/tvText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="109dp"
+            android:text="SignUp via Social Logins"
+            android:textColor="#a29bfe"
+            android:textSize="18dp" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="-292dp"
+            android:layout_toLeftOf="@id/tvText"
+            android:background="#a29bfe" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+        <!-- col 1 -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_round_shape3"
+                android:padding="20dp"
+                android:src="@drawable/fb3" />
+        </LinearLayout>
+        <!-- col 1 end -->
+        <!-- col 2 -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_round_shape3"
+                android:padding="20dp"
+                android:src="@drawable/tw3" />
+
+        </LinearLayout>
+        <!-- col 2 end -->
+        <!-- col 3 -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageButton
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_round_shape3"
+                android:padding="20dp"
+                android:src="@drawable/g3" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="170dp"
+        android:layout_height="53dp"
+        android:onClick="onButtonClick"
+        android:text="Login"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CardViewBind"
+        app:layout_constraintVertical_bias="0.519" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
